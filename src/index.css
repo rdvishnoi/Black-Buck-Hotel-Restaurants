@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-ivory-50 text-charcoal-800 font-sans;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+  ::selection {
+    @apply bg-gold-300 text-charcoal-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-400 px-7 py-3.5 text-sm font-semibold tracking-wide text-charcoal-950 shadow-gold transition-all duration-300 hover:bg-gold-300 hover:shadow-[0_15px_40px_-10px_rgba(201,143,55,0.6)] hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-forest-900;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ivory-200/40 bg-white/5 px-7 py-3.5 text-sm font-semibold tracking-wide text-ivory-50 backdrop-blur-sm transition-all duration-300 hover:bg-white/15 hover:border-ivory-200/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-ivory-200 focus-visible:ring-offset-2 focus-visible:ring-offset-forest-900;
+  }
+  .btn-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-forest-800 px-7 py-3.5 text-sm font-semibold tracking-wide text-ivory-50 transition-all duration-300 hover:bg-forest-700 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-forest-600 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory-50;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-forest-700/30 px-7 py-3.5 text-sm font-semibold tracking-wide text-forest-800 transition-all duration-300 hover:bg-forest-800 hover:text-ivory-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-forest-600 focus-visible:ring-offset-2;
+  }
+  .section-label {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold-600;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-ivory-100;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-forest-700 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-forest-800;
+}
